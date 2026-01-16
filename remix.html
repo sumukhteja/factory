@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything Is a Remix</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS UNCHANGED – EXACTLY AS PROVIDED */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'JetBrains Mono', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+            padding: 80px 40px 60px;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: rgba(0,0,0,0.15);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+        }
+
+        .content { padding: 50px 40px 60px; }
+
+        .lede {
+            font-size: 1.35em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 500;
+            color: #2d3748;
+            padding-left: 20px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            margin-top: 50px;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            position: relative;
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 8px;
+            width: 4px;
+            height: 28px;
+            background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+        }
+
+        p { margin-bottom: 24px; font-size: 1.05em; color: #2d3748; }
+
+        ul { margin: 30px 0; list-style: none; }
+
+        li {
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            color: #2d3748;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: 700;
+        }
+
+        .quote {
+            background: #fff7e6;
+            border-left: 4px solid #f59e0b;
+            padding: 24px 28px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '"';
+            font-size: 4em;
+            color: #f59e0b;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .header { padding: 60px 24px 40px; }
+            h1 { font-size: 1.9em; }
+            .content { padding: 40px 24px 50px; }
+            h2::before { left: -24px; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="header">
+        <span class="category-tag">Cultural Theory</span>
+        <h1>Everything Is a Remix</h1>
+    </div>
+
+    <div class="content">
+        <article>
+
+            <p class="lede">
+                Remix: To combine or edit existing materials to produce something new.
+            </p>
+
+            <p>
+                The term remix originally applied to music. It became prominent in the last century
+                during the rise of hip-hop, the first musical genre to widely incorporate sampling
+                from existing recordings.
+            </p>
+
+            <p>
+                Early example: The Sugarhill Gang sampled the bassline from Good Times by Chic
+                in the 1979 hit Rapper’s Delight. Since then, that same bassline has been sampled
+                dozens of times.
+            </p>
+
+            <ul>
+                <li>Music</li>
+                <li>Video</li>
+                <li>Photos</li>
+            </ul>
+
+            <p>
+                Today, anyone can remix anything and distribute it globally almost instantly.
+                You don’t need expensive tools. You don’t need a distributor. You don’t even need skills.
+            </p>
+
+            <div class="quote">
+                Remixing is a folk art. Anyone can do it.
+            </div>
+
+            <p>
+                Yet the techniques involved—collecting material, transforming it, combining it—
+                are the same ones used at every level of creation.
+                You could even say: everything is a remix.
+            </p>
+
+            <h2>Part 1 — The Song Remains the Same</h2>
+
+            <p>
+                To explain this, let’s start in England in 1968.
+                Led Zeppelin forms when Jimmy Page recruits John Paul Jones,
+                Robert Plant, and John Bonham.
+            </p>
+
+            <p>
+                They play extremely loud blues that soon becomes known as—
+                Wait. Let’s rewind.
+            </p>
+
+            <p>
+                Paris, 1961. William S. Burroughs coins the term “heavy metal”
+                in his novel The Soft Machine.
+                That book itself was created using the cut-up technique—
+                literally cutting up existing texts and rearranging them.
+            </p>
+
+            <p>
+                So in 1961, Burroughs not only invents the term heavy metal,
+                the genre Led Zeppelin would later pioneer—he also produces
+                an early form of remix.
+            </p>
+
+            <h2>Led Zeppelin and Copying</h2>
+
+            <p>
+                By the mid-1970s, Led Zeppelin is the biggest touring rock band
+                in the United States. Yet many critics and peers accuse them of imitation.
+            </p>
+
+            <ul>
+                <li>Bring It On Home borrows its opening and closing from Willie Dixon’s song of the same name</li>
+                <li>The Lemon Song uses lyrics from Killing Floor by Howlin’ Wolf</li>
+                <li>Black Mountain Side uses the melody from Blackwaterside, arranged by Bert Jansch</li>
+                <li>Dazed and Confused is an uncredited cover of a song by Jake Holmes</li>
+                <li>Stairway to Heaven opens similarly to Taurus by Spirit</li>
+            </ul>
+
+            <p>
+                Led Zeppelin clearly copied a great deal of other people’s material.
+                That alone was not unusual.
+            </p>
+
+            <p>
+                What made them different were two things:
+                they did not credit the original artists,
+                and they did not transform the material enough to claim originality.
+            </p>
+
+            <p>
+                British blues bands commonly recorded covers,
+                but unlike Zeppelin, they didn’t claim to have written them.
+                Most bands emulated a general sound.
+                Zeppelin copied specific melodies and lyrics.
+            </p>
+
+            <h2>Legal Remix</h2>
+
+            <ul>
+                <li>Covers – performances of existing material</li>
+                <li>Imitations – copies transformed enough to remain within the law</li>
+            </ul>
+
+            <p>
+                These account for almost everything the entertainment industry produces.
+            </p>
+
+            <p>
+                Ironically, after their success, Led Zeppelin went from copying to being copied:
+                1970s: Aerosmith, Heart, Boston.
+                1980s: heavy metal.
+                Later: sampling culture.
+            </p>
+
+            <h2>Part 2 — Remix Inc. (Hollywood)</h2>
+
+            <p>
+                Most blockbuster films rely heavily on existing material.
+                Of the ten highest-grossing films of the past decade,
+                the majority are sequels, remakes, or adaptations.
+            </p>
+
+            <p>
+                Hollywood’s greatest skill is turning the old into the new.
+                Stories are told, retold, transformed, retold again, and subverted.
+            </p>
+
+            <p>
+                Genres become subgenres, each with strict conventions.
+                Horror splits into supernatural, slasher, zombie, and creature films.
+                All reuse and transform familiar elements.
+            </p>
+
+            <h2>Star Wars as Remix</h2>
+
+            <p>
+                Star Wars remains an extraordinary work of imagination,
+                yet its individual components are as recognizable as samples in a remix.
+            </p>
+
+            <ul>
+                <li>Joseph Campbell and The Hero with a Thousand Faces</li>
+                <li>1930s Flash Gordon serials</li>
+                <li>Films by Akira Kurosawa</li>
+                <li>War films, westerns, and science fiction classics</li>
+            </ul>
+
+            <p>
+                George Lucas collected materials, combined them, and transformed them.
+                Without those earlier films, Star Wars would not exist.
+                Creation requires influence.
+            </p>
+
+            <h2>Quentin Tarantino</h2>
+
+            <p>
+                Quentin Tarantino represents the ultimate remix filmmaker.
+                Kill Bill is essentially a cinematic mash-up,
+                densely packed with elements sampled from countless films.
+            </p>
+
+            <h2>Part 3 — The Elements of Creativity</h2>
+
+            <p>
+                Creativity is surrounded by myths:
+                that it comes from sudden inspiration,
+                that original works break all molds,
+                that genius creates from nothing.
+            </p>
+
+            <p>
+                Creativity is not magic.
+                It comes from applying ordinary thinking tools to existing materials.
+            </p>
+
+            <h2>Copying Is How We Learn</h2>
+
+            <ul>
+                <li>Bob Dylan’s first album contained eleven covers</li>
+                <li>Richard Pryor began by imitating Bill Cosby</li>
+                <li>Hunter S. Thompson retyped The Great Gatsby word for word</li>
+            </ul>
+
+            <p>Nobody starts out original.</p>
+
+            <h2>Transformation</h2>
+
+            <ul>
+                <li>Steam engines</li>
+                <li>The QWERTY keyboard</li>
+                <li>The light bulb</li>
+            </ul>
+
+            <p>
+                These were not isolated inventions but critical points
+                in long evolutionary chains.
+            </p>
+
+            <h2>Combination</h2>
+
+            <ul>
+                <li>Gutenberg’s printing press</li>
+                <li>Ford’s Model T</li>
+                <li>The Internet and the World Wide Web</li>
+            </ul>
+
+            <p>
+                The basic elements of creativity are copying,
+                transforming, and combining.
+            </p>
+
+            <h2>Part 4 — System Failure (Intellectual Property)</h2>
+
+            <p>
+                Culture evolves like biology.
+                Genes copy, mutate, and combine.
+                Ideas—memes—do the same.
+            </p>
+
+            <p>
+                But our legal systems treat ideas as isolated property.
+                Copyright and patents were meant to encourage creation
+                and build a rich public domain.
+            </p>
+
+            <p>
+                Instead, they expanded into excessive protection,
+                litigation culture, and patent and sampling trolls.
+            </p>
+
+            <div class="quote">
+                Less innovation. More fear. More lawsuits.
+            </div>
+
+            <h2>Final Conclusion</h2>
+
+            <p>
+                Ideas are not neat.
+                They overlap, tangle, and build upon each other.
+                Everything we create evolves from what came before.
+            </p>
+
+            <p>
+                Copy. Transform. Combine.<br>
+                That’s how culture works.<br>
+                That’s how we live.<br>
+                That’s how we create.
+            </p>
+
+        </article>
+    </div>
+</div>
+</body>
+</html>

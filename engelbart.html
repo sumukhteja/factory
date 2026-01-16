@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douglas Engelbart, the Mouse, and the Unseen Roots of Modern Computing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'JetBrains Mono', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fafafa;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+            padding: 80px 40px 60px;
+            position: relative;
+        }
+        
+        .category-tag {
+            display: inline-block;
+            background: rgba(0,0,0,0.15);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            line-height: 1.2;
+            margin-bottom: 0;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #1a1a1a;
+            font-family: 'IBM Plex Sans', 'JetBrains Mono', system-ui, sans-serif;
+        }
+        
+        .content {
+            padding: 50px 40px 60px;
+        }
+        
+        .lede {
+            font-size: 1.35em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 500;
+            color: #2d3748;
+            padding-left: 20px;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        h2 {
+            font-size: 1.6em;
+            line-height: 1.3;
+            margin-top: 50px;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a202c;
+            position: relative;
+            font-family: 'IBM Plex Sans', 'JetBrains Mono', system-ui, sans-serif;
+        }
+        
+        h2::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 8px;
+            width: 4px;
+            height: 28px;
+            background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+            border-radius: 2px;
+        }
+        
+        p {
+            margin-bottom: 24px;
+            font-size: 1.05em;
+            color: #2d3748;
+        }
+        
+        ul {
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        li {
+            margin-bottom: 20px;
+            font-size: 1.05em;
+            padding-left: 40px;
+            position: relative;
+            color: #2d3748;
+        }
+        
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #1a202c;
+            background: linear-gradient(180deg, transparent 60%, rgba(245, 158, 11, 0.25) 60%);
+        }
+        
+        .highlight-box {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 24px 28px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .quote {
+            background: #fff7e6;
+            border-left: 4px solid #f59e0b;
+            padding: 24px 28px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            position: relative;
+        }
+        
+        .quote::before {
+            content: '"';
+            font-size: 4em;
+            color: #f59e0b;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .quote p {
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .timeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .timeline-item {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid #f59e0b;
+            position: relative;
+        }
+        
+        .timeline-year {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 12px;
+        }
+        
+        .stat-highlight {
+            background: linear-gradient(180deg, transparent 60%, rgba(234, 179, 8, 0.3) 60%);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 60px 24px 40px;
+            }
+            
+            h1 {
+                font-size: 1.9em;
+            }
+            
+            .content {
+                padding: 40px 24px 50px;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+            
+            h2::before {
+                left: -24px;
+            }
+            
+            .lede {
+                font-size: 1.2em;
+                padding-left: 16px;
+            }
+            
+            li {
+                padding-left: 32px;
+            }
+            
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="category-tag">Computing History</span>
+            <h1>Douglas Engelbart, the Mouse, and the Unseen Roots of Modern Computing</h1>
+        </div>
+        
+        <div class="content">
+            <article>
+                <p class="lede">You know the computer mouse — that little plastic thing you've probably stepped on in your backpack — right? It was invented long before personal computers existed and not by Apple or Microsoft.</p>
+                
+                <p>The guy behind it was <strong>Douglas Engelbart</strong>, a visionary who saw computers not as calculators, but as tools to augment human intelligence. That idea, now so baked into our digital lives, traces back to the 1960s and changed everything.</p>
+                
+                <h2>A Vision Beyond Machines</h2>
+                
+                <p>Engelbart wasn't just fiddling with gadgets — he was trying to answer a big question: How can we make humans smarter by partnering with machines? His 1962 paper <em>Augmenting Human Intellect</em> wasn't a tech roadmap — it was a philosophical manifesto.</p>
+                
+                <div class="quote">
+                    <p>The mouse was just a tiny piece of a much larger project, aimed at augmenting human intellect.</p>
+                    <p><strong>— Douglas Engelbart</strong></p>
+                </div>
+                
+                <p>That approach laid the philosophical groundwork for every interactive computer system that followed.</p>
+                
+                <h2>The Mother of All Demos</h2>
+                
+                <p>In 1968, Engelbart unveiled a 90-minute tech showcase now called "The Mother of All Demos." This wasn't a TED Talk — it was the first public unveiling of:</p>
+                
+                <ul>
+                    <li>The computer mouse</li>
+                    <li>Graphical windows</li>
+                    <li>Hypertext linking</li>
+                    <li>Real-time collaborative editing</li>
+                    <li>Video conferencing</li>
+                    <li>On-screen word processing</li>
+                </ul>
+                
+                <p>Imagine seeing all of that <strong>before the internet existed</strong>. Steve Jobs later admitted that this kind of hands-on interaction was the future of computing.</p>
+                
+                <p>Engelbart's inventions like the mouse were initially crude — a one-button wooden block whipped up in 1964 — but they fundamentally changed how humans interact with computers.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1962</div>
+                        <p><strong>Augmenting Human Intellect</strong> paper published</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1964</div>
+                        <p><strong>Wooden mouse prototype</strong> created</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1968</div>
+                        <p><strong>Mother of All Demos</strong> presented</p>
+                    </div>
+                </div>
+                
+                <h2>Xerox PARC: The Innovation Engine</h2>
+                
+                <p>Engelbart's ideas spread like seeds. Engineers who once worked with him — and those inspired by his demos — helped build Xerox's Palo Alto Research Center (PARC). PARC became Silicon Valley's innovation engine in the 1970s, inventing:</p>
+                
+                <ul>
+                    <li>Graphical user interfaces (GUIs)</li>
+                    <li>Ethernet networking</li>
+                    <li>Laser printing</li>
+                    <li>The modern mouse refinements</li>
+                </ul>
+                
+                <p>Much of what makes computers usable today — icons, windows, drag-and-drop — came from PARC's labs.</p>
+                
+                <h2>Steve Jobs, Apple, and the GUI Revolution</h2>
+                
+                <p>In 1979, a young Steve Jobs paid Xerox a reported <span class="stat-highlight">$1 million in Apple stock</span> just for a peek at PARC's research. Within minutes he told his team:</p>
+                
+                <div class="quote">
+                    <p>I was so blinded by the first thing they showed me — the graphical user interface — that I thought it was the best thing I'd ever seen in my life.</p>
+                    <p><strong>— Steve Jobs</strong></p>
+                </div>
+                
+                <p>That reaction sparked the Apple Lisa and later the Macintosh — the first personal computers with GUIs many ordinary people could use. By 1984, Mac sales helped Apple jump from startup to cultural force.</p>
+                
+                <h2>Bill Gates and the Windows Ecosystem</h2>
+                
+                <p>Meanwhile, Bill Gates and Microsoft were watching closely. Microsoft licensed some concepts and began developing Windows, a GUI environment that would eventually ship on millions of PCs worldwide. By the early 1990s, Windows dominated the market with over <span class="stat-highlight">90% desktop share</span>, making graphical computing mainstream.</p>
+                
+                <div class="quote">
+                    <p>It's more like we both had this rich neighbor named Xerox...</p>
+                    <p><strong>— Bill Gates, on the Mac vs. Windows story</strong></p>
+                </div>
+                
+                <h2>The Legacy Today</h2>
+                
+                <p>Engelbart's legacy isn't just gadgets — it's interaction design itself. Computers today — from Google Docs to Zoom — still use collaboration and interface concepts he pioneered.</p>
+                
+                <div class="quote">
+                    <p>How do you harness the collective intelligence of the world to solve urgent global problems? That's what Doug was about.</p>
+                    <p><strong>— Adam Cheyer</strong></p>
+                </div>
+                
+                <div class="highlight-box">
+                    <p>Engelbart's early vision — that computers could expand human capabilities — wasn't a prediction. It was a blueprint. From the humble mouse to the GUI revolution to the era of AI assistants, practically every step in computing traces back to his insight that computers should think <em>with</em> us, not just <em>for</em> us.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

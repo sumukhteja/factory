@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Diarization + AI Agents Will Make Your Assistant Actually Know You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fafafa;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+            padding: 80px 40px 60px;
+            position: relative;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.15);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            line-height: 1.2;
+            margin-bottom: 0;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #1a1a1a;
+            font-family: 'IBM Plex Sans', 'JetBrains Mono', system-ui, sans-serif;
+        }
+
+        .content {
+            padding: 50px 40px 60px;
+        }
+
+        .lede {
+            font-size: 1.35em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 500;
+            color: #2d3748;
+            padding-left: 20px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            line-height: 1.3;
+            margin-top: 50px;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1a202c;
+            position: relative;
+            font-family: 'IBM Plex Sans', 'JetBrains Mono', system-ui, sans-serif;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 8px;
+            width: 4px;
+            height: 28px;
+            background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 24px;
+            font-size: 1.05em;
+            color: #2d3748;
+        }
+
+        ul {
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 20px;
+            font-size: 1.05em;
+            padding-left: 40px;
+            position: relative;
+            color: #2d3748;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #1a202c;
+            background: linear-gradient(180deg, transparent 60%, rgba(245, 158, 11, 0.25) 60%);
+        }
+
+        .highlight-box {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 24px 28px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 12px;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-highlight {
+            background: linear-gradient(180deg, transparent 60%, rgba(234, 179, 8, 0.3) 60%);
+            font-weight: 500;
+        }
+
+        .code-like {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+            font-family: 'Menlo', 'Monaco', monospace;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #2d3748;
+        }
+
+        .code-like strong {
+            background: none;
+            color: #f59e0b;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 60px 24px 40px;
+            }
+
+            h1 {
+                font-size: 1.9em;
+            }
+
+            .content {
+                padding: 40px 24px 50px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h2::before {
+                left: -24px;
+            }
+
+            .lede {
+                font-size: 1.2em;
+                padding-left: 16px;
+            }
+
+            li {
+                padding-left: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="category-tag">AI Future</span>
+            <h1>How Diarization + AI Agents Will Make Your Assistant Actually Know You</h1>
+        </div>
+
+        <div class="content">
+            <article>
+                <p class="lede">In the next 2–3 years, voice assistants won't just respond — they'll recognize you, know
+                    which of your teammates said what, and "remember" people the way real humans do.</p>
+
+                <p>At the heart of this shift is <strong>speaker diarization</strong> — technology that answers the
+                    question: who spoke when? Instead of a jumbled transcript, you get voices with identities.</p>
+
+                <h2>The Scale of the Opportunity</h2>
+
+                <p>Voice and speech AI is booming:</p>
+
+                <ul>
+                    <li>The voice recognition market is projected to surge from about <span class="stat-highlight">$12
+                            billion in 2022 to $50 billion by 2029</span>.</li>
+                    <li>The broader AI voice assistant market alone is expected to grow at over <span
+                            class="stat-highlight">31% CAGR through 2029</span>, reaching nearly $14 billion.</li>
+                    <li>The speaker diarization AI sector, once a niche backend tool, hit <span
+                            class="stat-highlight">$1.28 billion in 2024</span> and could swell to $6.32 billion by
+                        2033.</li>
+                    <li>Speaker ID accuracy — a critical piece of the puzzle — already delivers <span
+                            class="stat-highlight">70–90%+ performance</span> depending on context.</li>
+                    <li>Investment is following suit — voice AI startups, including those focused on diarization, are
+                        drawing serious capital. For example, a leading voice AI company just raised <span
+                            class="stat-highlight">$130 million at a $1.3 billion valuation</span> to build voice-first
+                        agents across industries.</li>
+                </ul>
+
+                <h2>What Diarization Actually Does</h2>
+
+                <p>Most voice assistants hear words but not who said them. Diarization changes that — labeling Talker A,
+                    Talker B, Talker C in multi-person audio, instead of one anonymous blob of sound.</p>
+
+                <p>So instead of a transcript saying:</p>
+
+                <div class="code-like">
+                    <strong>Without diarization:</strong><br>
+                    "We'll start the project next week…"
+                </div>
+
+                <div class="code-like">
+                    <strong>With diarization:</strong><br>
+                    "Riya committed us to starting the project next week."<br>
+                    "Kunal said to send the draft by Friday."
+                </div>
+
+                <p>This turns your AI assistant into a group participant rather than a passive recorder.</p>
+
+                <h2>Why This Matters for Your Day-to-Day</h2>
+
+                <p>Here's where the real transformation happens:</p>
+
+                <ul>
+                    <li><strong>Meetings that remember people:</strong> Your AI will know Rajesh's voice from last
+                        week's meeting and automatically link his decisions to his profile — without you tagging
+                        anything. Imagine asking, "Who promised to prep the budget slides?" and getting a voice-aware
+                        answer.</li>
+
+                    <li><strong>Home assistants that treat you like you:</strong> At home, the assistant won't just
+                        respond to sounds — it will react to you. Kids, partners, guests — each voice gets a profile,
+                        preferences are remembered, commands are attributed correctly.</li>
+
+                    <li><strong>Multi-context identity:</strong> Whether it's office calls, club discussions, family
+                        dinners, or project calls, your assistant knows not just what was said, but by whom — and
+                        retains that over time.</li>
+                </ul>
+
+                <h2>What Experts Think</h2>
+
+                <p>AI thought leaders in the space emphasize the centrality of diarization. As one industry engineer put
+                    it on LinkedIn: <em>"If you're choosing a voice AI, go with the one that has speaker diarization —
+                        and does it well."</em> That's because accurately answering who spoke can be harder than what
+                    was said — especially in messy, real conversations.</p>
+
+                <p>As voice AI CEO Scott Stephenson recently told Reuters, <em>"Voice AI has gone mainstream… any place
+                        where there's a text field or a button click, all of those products are working on adding
+                        voice."</em></p>
+
+                <h2>Near-Future Reality: Personalized, Memory-Rich AI</h2>
+
+                <div class="highlight-box">
+                    <p>In the next few years, agents won't just be reactive tools — they'll be proactive collaborators.
+                        They'll carry voice memories, offer person-aware summaries, and adapt across contexts the way a
+                        trusted human assistant would.</p>
+                </div>
+
+                <p>You won't just talk to your assistant — it will recognize you, remember you, and interact with others
+                    in your world just like another human participant. That's not sci-fi. It's where speaker diarization
+                    meets agentic AI — and it's rapidly becoming the new normal.</p>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html> 
